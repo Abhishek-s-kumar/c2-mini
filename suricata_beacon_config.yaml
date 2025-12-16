@@ -1,0 +1,72 @@
+%YAML 1.1
+---
+# Suricata Beacon Detection Configuration
+
+# Rule files
+rule-files:
+  - suricata_beacon_rules.rules
+
+# Logging configuration
+logging:
+  default-log-format: "%D - %S - %M"
+  outputs:
+    - console:
+        enabled: yes
+        level: info
+    - file:
+        enabled: yes
+        filename: /var/log/suricata/eve.json
+        level: info
+        type: json
+
+# Eve JSON output
+eve-log:
+  enabled: yes
+  filetype: regular
+  filename: eve.json
+  types:
+    - alert
+    - http
+    - dns
+    - tls
+  community-id: true
+  community-id-seed: 0
+
+# Network configuration
+af-packet:
+  - interface: eth0
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
+    use-mmap: yes
+
+# Flow settings
+flow:
+  memcap: 64mb
+  hash-size: 65536
+  prealloc: 10000
+  emergency-recovery: 30
+
+# Detection settings
+detect:
+  profile: medium
+  custom-values:
+    toclient-groups: 300
+    toserver-groups: 300
+  sgh-mpm-context: full
+  inspection-recursion-limit: 3000
+  prefilter:
+    default: mpm
+
+# App Layer Protocol Configuration
+app-layer:
+  protocols:
+    tls:
+      enabled: yes
+    dns:
+      enabled: yes
+    http:
+      enabled: yes
+
+# Threshold configuration
+threshold-file: /etc/suricata/threshold.config
