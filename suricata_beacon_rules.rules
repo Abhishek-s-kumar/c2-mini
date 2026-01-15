@@ -1,0 +1,8 @@
+# HTTP Beacon Rule
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET MALWARE C2 HTTP Beacon"; flow:established,to_server; content:"/api/v1/checkin"; http_uri; content:"status"; content:"active"; fast_pattern; classtype:trojan-activity; sid:2024123; rev:1;)
+
+# DNS Beacon Rule  
+alert dns $HOME_NET any -> any 53 (msg:"ET MALWARE DNS Beacon"; dns.query; content:".malicious-domain.com"; nocase; isdataat:!1,relative; classtype:domain-c2; sid:2024124; rev:1;)
+
+# ICMP Beacon Rule
+alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET MALWARE ICMP Tunnel"; itype:8; icode:0; dsize:>50; content:"|00 00 00 00|"; depth:4; offset:4; classtype:bad-unknown; sid:2024125; rev:1;)
