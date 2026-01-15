@@ -1,0 +1,9 @@
+{
+  "p_score": 0.5045408896541569,
+  "fft_peak": 0.7620938083939016,
+  "autocorr_max": 0.06984945995489733,
+  "entropy_norm": 0.14118208842681362,
+  "dominant_frequency": 0.1,
+  "dominant_period": 10.0,
+  "beacon_detected": "False"
+}

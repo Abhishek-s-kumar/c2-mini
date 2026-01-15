@@ -1,0 +1,10 @@
+{
+  "p_score": 0.5148195465642098,
+  "fft_peak": 0.3755182859149631,
+  "autocorr_max": 0.8894753431708592,
+  "entropy_norm": 0.9558895253505957,
+  "dominant_frequency": 0.1,
+  "dominant_period": 10.0,
+  "beacon_detected": "False",
+  "explanation": "Ideal periodic signal with clear 10-second period"
+}
