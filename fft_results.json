@@ -1,7 +1,7 @@
 {
-  "p_score": 0.5045408896541569,
-  "fft_peak": 0.7620938083939016,
-  "autocorr_max": 0.06984945995489733,
+  "p_score": 0.5047173842899992,
+  "fft_peak": 0.7613597132440689,
+  "autocorr_max": 0.07102479169433584,
   "entropy_norm": 0.14118208842681362,
   "dominant_frequency": 0.1,
   "dominant_period": 10.0,
