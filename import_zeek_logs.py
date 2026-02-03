@@ -8,12 +8,12 @@ import psycopg2
 import sys
 import os
 from datetime import datetime
-from configparser import ConfigParser
 
 def import_zeek_log(log_file):
     """Import a Zeek conn.log file into PostgreSQL"""
     
     # Read the log file
+    # Zeek logs are tab-separated with # as comment lines
     try:
         df = pd.read_csv(
             log_file,
@@ -22,7 +22,7 @@ def import_zeek_log(log_file):
             header=None,
             usecols=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
             names=[
-                'ts', 'uid', 'id_orig_h', 'id_orig_p', 'id_resh_h', 'id_resp_p',
+                'ts', 'uid', 'id_orig_h', 'id_orig_p', 'id_resp_h', 'id_resp_p',
                 'proto', 'service', 'duration', 'orig_bytes', 'resp_bytes',
                 'conn_state', 'local_orig', 'local_resp'
             ]
@@ -47,10 +47,11 @@ def import_zeek_log(log_file):
         print(f"[-] Failed to read {log_file}: {e}")
         return None
 
-def save_to_database(df):
+def save_to_database(df, config_file='config/database.conf'):
     """Save DataFrame to PostgreSQL"""
-    config = ConfigParser()
-    config.read('config/database.conf')
+    import configparser
+    config = configparser.ConfigParser()
+    config.read(config_file)
     
     try:
         conn = psycopg2.connect(

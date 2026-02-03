@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ============================================================================
-# C2 Beacon Detection - Complete Production Integration Script
+# C2 Beacon Detection - Complete Production Integration Script (FIXED)
 # ============================================================================
 # This script sets up the entire production C2 detection system:
 # 1. System dependencies (requires sudo)
@@ -18,6 +18,10 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
+
+# ============================================================================
+# FUNCTION DEFINITIONS (ALL FUNCTIONS MUST BE DEFINED BEFORE BEING CALLED)
+# ============================================================================
 
 print_section() {
     echo -e "\n${BLUE}========================================${NC}"
@@ -45,9 +49,6 @@ check_root() {
     fi
 }
 
-# ============================================================================
-# SECTION 1: SYSTEM DEPENDENCIES (requires sudo)
-# ============================================================================
 install_system_dependencies() {
     print_section "1. Installing System Dependencies"
     
@@ -63,9 +64,6 @@ install_system_dependencies() {
     print_success "System dependencies installed"
 }
 
-# ============================================================================
-# SECTION 2: POSTGRESQL SETUP (requires sudo)
-# ============================================================================
 setup_postgresql() {
     print_section "2. Setting Up PostgreSQL Database"
     
@@ -135,9 +133,6 @@ EOF
     print_success "PostgreSQL database configured"
 }
 
-# ============================================================================
-# SECTION 3: PYTHON ENVIRONMENT
-# ============================================================================
 setup_python_environment() {
     print_section "3. Setting Up Python Environment"
     
@@ -165,9 +160,6 @@ REQ
     print_success "Python environment ready"
 }
 
-# ============================================================================
-# SECTION 4: CREATE INTEGRATION SCRIPTS
-# ============================================================================
 create_integration_scripts() {
     print_section "4. Creating Integration Scripts"
     
@@ -734,13 +726,14 @@ if __name__ == '__main__':
 </body>
 </html>''')
     
+    # Run the Flask app
+    app.run(host='0.0.0.0', port=5000, debug=False)
+PYEOF
+    chmod +x dashboard.py
     print_success "Created: dashboard.py"
 }
 
-# ============================================================================
-# SECTION 5: CREATE CONFIGURATION FILES
-# ============================================================================
-create_configuration() {
+create_configuration_files() {
     print_section "5. Creating Configuration Files"
     
     print_step "Creating project structure..."
@@ -962,7 +955,7 @@ main() {
     setup_postgresql
     setup_python_environment
     create_integration_scripts
-    create_configuration
+    create_configuration_files
     
     # Calculate execution time
     END_TIME=$(date +%s)
