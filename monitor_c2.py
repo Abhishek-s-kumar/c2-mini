@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Continuous C2 Beacon Monitoring Service
+FIXED: JSON serialization for numpy types
 """
 
 import time
@@ -60,12 +61,20 @@ class C2Monitor:
                 result = self.detector.analyze_host(host, df)
                 
                 if result and result['detected']:
-                    # Create alert
+                    # Create alert (FIXED: Convert numpy types to Python types for JSON serialization)
                     alert = {
                         'timestamp': datetime.now().isoformat(),
-                        'host': result['host'],
-                        'p_score': result['p_score'],
-                        'details': result
+                        'host': str(result['host']),
+                        'p_score': float(result['p_score']),
+                        'details': {
+                            'host': str(result['host']),
+                            'p_score': float(result['p_score']),
+                            'fft_peak': float(result['fft_peak']),
+                            'autocorr_max': float(result['autocorr_max']),
+                            'entropy_norm': float(result['entropy_norm']),
+                            'samples': int(result['samples']),
+                            'detected': bool(result['detected'])
+                        }
                     }
                     
                     self.alerts.append(alert)

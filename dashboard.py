@@ -64,7 +64,8 @@ def analyze_now():
         for host in df['id_orig_h'].unique()[:5]:
             result = detector.analyze_host(host, df)
             if result:
-                results.append(result)
+                safe_result = {k: (bool(v) if k=="detected" else float(v) if isinstance(v, (int, float)) else v) for k, v in result.items()}
+                results.append(safe_result)
         
         return jsonify({
             'timestamp': datetime.now().isoformat(),

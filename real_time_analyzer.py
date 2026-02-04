@@ -63,7 +63,7 @@ class RealTimeC2Detector:
         host_df.set_index('ts', inplace=True)
         
         # Resample to 1-second intervals
-        time_series = host_df['resp_bytes'].resample('1S').sum().fillna(0)
+        time_series = host_df['resp_bytes'].resample('1s').sum().fillna(0)
         
         # Calculate metrics (simplified P-Score)
         if len(time_series) > 20:
