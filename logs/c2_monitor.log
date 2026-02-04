@@ -10,3 +10,5 @@
 2026-02-04 06:03:04,536 - INFO - Starting C2 beacon monitoring (interval: 30s)
 2026-02-04 06:03:04,557 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.100, P-Score: 0.712
 2026-02-04 06:08:43,748 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 06:13:53,934 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 06:16:54,038 - INFO - Starting C2 beacon monitoring (interval: 30s)
