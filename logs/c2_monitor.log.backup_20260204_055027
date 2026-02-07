@@ -1,0 +1,189 @@
+2026-01-27 17:34:24,129 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-01-27 17:34:24,163 - WARNING - No data available
+2026-01-27 17:34:54,167 - WARNING - No data available
+2026-01-27 17:35:24,170 - WARNING - No data available
+2026-01-27 17:35:54,172 - WARNING - No data available
+2026-01-27 17:36:24,175 - WARNING - No data available
+2026-01-27 17:36:54,178 - WARNING - No data available
+2026-01-27 17:37:24,181 - WARNING - No data available
+2026-01-27 17:37:54,184 - WARNING - No data available
+2026-01-27 17:38:24,187 - WARNING - No data available
+2026-01-27 17:38:54,192 - WARNING - No data available
+2026-01-27 17:39:24,194 - WARNING - No data available
+2026-01-27 17:39:54,196 - WARNING - No data available
+2026-01-27 17:40:24,199 - WARNING - No data available
+2026-01-27 17:40:54,206 - WARNING - No data available
+2026-01-27 17:41:24,208 - WARNING - No data available
+2026-01-27 17:41:54,211 - WARNING - No data available
+2026-01-27 17:51:38,047 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-01-27 17:51:38,080 - WARNING - No data available
+2026-01-27 17:52:08,121 - WARNING - No data available
+2026-01-27 17:52:38,123 - WARNING - No data available
+2026-01-27 17:53:08,129 - WARNING - No data available
+2026-01-27 17:53:38,132 - WARNING - No data available
+2026-01-27 17:54:08,137 - WARNING - No data available
+2026-01-27 17:54:38,150 - WARNING - No data available
+2026-01-27 17:55:08,154 - WARNING - No data available
+2026-01-27 17:55:38,157 - WARNING - No data available
+2026-01-27 17:56:08,160 - WARNING - No data available
+2026-01-27 18:04:48,937 - ERROR - Failed to connect to database
+2026-01-27 18:14:13,079 - ERROR - Failed to connect to database
+2026-01-27 18:22:15,171 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-01-27 18:22:15,196 - WARNING - No data available
+2026-01-27 18:22:45,200 - WARNING - No data available
+2026-01-27 18:23:15,201 - WARNING - No data available
+2026-01-27 18:23:45,203 - WARNING - No data available
+2026-01-27 18:24:15,205 - WARNING - No data available
+2026-01-27 18:24:45,207 - WARNING - No data available
+2026-01-27 18:25:15,209 - WARNING - No data available
+2026-01-27 18:25:45,216 - WARNING - No data available
+2026-01-27 18:26:15,218 - WARNING - No data available
+2026-01-27 18:26:45,219 - WARNING - No data available
+2026-01-27 18:27:15,221 - WARNING - No data available
+2026-01-27 18:27:45,224 - WARNING - No data available
+2026-01-27 18:28:15,226 - WARNING - No data available
+2026-01-27 18:28:45,229 - WARNING - No data available
+2026-01-27 18:29:15,233 - WARNING - No data available
+2026-01-27 18:29:45,235 - WARNING - No data available
+2026-01-27 18:30:15,236 - WARNING - No data available
+2026-01-27 18:30:45,241 - WARNING - No data available
+2026-01-27 18:31:15,243 - WARNING - No data available
+2026-01-27 18:31:45,245 - WARNING - No data available
+2026-01-27 18:32:15,247 - WARNING - No data available
+2026-01-27 18:32:45,253 - WARNING - No data available
+2026-01-27 18:33:15,255 - WARNING - No data available
+2026-01-27 18:33:45,262 - WARNING - No data available
+2026-01-27 18:34:15,263 - WARNING - No data available
+2026-01-27 18:34:45,265 - WARNING - No data available
+2026-01-27 18:35:15,268 - WARNING - No data available
+2026-01-27 18:35:45,270 - WARNING - No data available
+2026-01-27 18:36:15,272 - WARNING - No data available
+2026-01-27 18:36:45,287 - WARNING - No data available
+2026-01-27 18:37:15,289 - WARNING - No data available
+2026-01-27 18:37:45,291 - WARNING - No data available
+2026-01-27 18:38:15,293 - WARNING - No data available
+2026-01-27 18:38:45,295 - WARNING - No data available
+2026-01-27 18:39:12,057 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-01-27 18:39:12,067 - WARNING - No data available
+2026-01-27 18:39:15,297 - WARNING - No data available
+2026-02-03 15:04:39,536 - ERROR - Failed to connect to database
+2026-02-03 15:08:30,666 - ERROR - Failed to connect to database
+2026-02-03 15:12:30,433 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-03 15:12:30,447 - WARNING - No data available
+2026-02-03 15:13:00,453 - WARNING - No data available
+2026-02-03 15:13:30,470 - WARNING - No data available
+2026-02-03 15:14:00,473 - WARNING - No data available
+2026-02-03 15:14:30,475 - WARNING - No data available
+2026-02-03 15:15:00,477 - WARNING - No data available
+2026-02-03 15:15:30,481 - WARNING - No data available
+2026-02-03 15:16:00,500 - WARNING - No data available
+2026-02-03 15:16:30,511 - WARNING - No data available
+2026-02-03 15:17:00,521 - WARNING - No data available
+2026-02-03 15:17:30,524 - WARNING - No data available
+2026-02-03 15:18:26,893 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-03 15:18:26,898 - WARNING - No data available
+2026-02-03 15:18:56,900 - WARNING - No data available
+2026-02-03 15:19:26,902 - WARNING - No data available
+2026-02-03 15:19:56,916 - ERROR - Detection error: [Errno 5] Input/output error
+2026-02-03 15:20:20,283 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-03 15:20:20,298 - WARNING - No data available
+2026-02-03 15:20:26,925 - ERROR - Detection error: [Errno 5] Input/output error
+2026-02-03 15:20:50,302 - WARNING - No data available
+2026-02-03 15:20:56,926 - ERROR - Detection error: [Errno 5] Input/output error
+2026-02-03 15:21:23,265 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-03 15:21:23,270 - WARNING - No data available
+2026-02-03 15:21:53,272 - WARNING - No data available
+2026-02-03 15:22:23,276 - WARNING - No data available
+2026-02-03 15:22:53,283 - WARNING - No data available
+2026-02-03 15:23:23,286 - WARNING - No data available
+2026-02-03 15:23:53,290 - WARNING - No data available
+2026-02-03 15:24:23,299 - WARNING - No data available
+2026-02-03 15:24:53,310 - WARNING - No data available
+2026-02-03 15:25:23,316 - WARNING - No data available
+2026-02-03 15:25:53,320 - WARNING - No data available
+2026-02-03 15:26:23,328 - WARNING - No data available
+2026-02-03 15:26:53,333 - WARNING - No data available
+2026-02-03 15:27:23,338 - WARNING - No data available
+2026-02-03 15:27:53,344 - WARNING - No data available
+2026-02-03 15:28:23,347 - WARNING - No data available
+2026-02-03 15:28:53,350 - WARNING - No data available
+2026-02-03 15:29:23,353 - WARNING - No data available
+2026-02-03 15:29:53,357 - WARNING - No data available
+2026-02-03 15:30:23,364 - WARNING - No data available
+2026-02-03 15:30:53,369 - WARNING - No data available
+2026-02-03 15:31:23,371 - WARNING - No data available
+2026-02-03 15:31:53,376 - WARNING - No data available
+2026-02-03 15:32:23,378 - WARNING - No data available
+2026-02-03 15:32:53,413 - WARNING - No data available
+2026-02-03 15:33:23,416 - WARNING - No data available
+2026-02-03 15:33:53,418 - WARNING - No data available
+2026-02-03 15:56:21,506 - WARNING - No data available
+2026-02-03 16:07:06,545 - WARNING - No data available
+2026-02-03 16:07:36,552 - WARNING - No data available
+2026-02-03 16:08:06,555 - WARNING - No data available
+2026-02-03 16:08:36,562 - WARNING - No data available
+2026-02-03 16:09:06,565 - WARNING - No data available
+2026-02-03 16:09:36,567 - WARNING - No data available
+2026-02-03 16:10:06,569 - WARNING - No data available
+2026-02-03 16:10:36,571 - WARNING - No data available
+2026-02-03 16:11:06,572 - WARNING - No data available
+2026-02-03 16:11:36,575 - WARNING - No data available
+2026-02-03 16:12:06,578 - WARNING - No data available
+2026-02-03 16:12:36,585 - WARNING - No data available
+2026-02-03 16:13:06,587 - WARNING - No data available
+2026-02-03 16:13:36,589 - WARNING - No data available
+2026-02-03 16:14:06,592 - WARNING - No data available
+2026-02-03 16:14:36,595 - WARNING - No data available
+2026-02-03 16:15:06,599 - WARNING - No data available
+2026-02-03 16:15:36,602 - WARNING - No data available
+2026-02-03 16:16:06,604 - WARNING - No data available
+2026-02-03 16:16:36,606 - WARNING - No data available
+2026-02-03 16:17:06,608 - WARNING - No data available
+2026-02-03 16:17:36,638 - WARNING - No data available
+2026-02-03 16:18:06,640 - WARNING - No data available
+2026-02-03 16:18:36,642 - WARNING - No data available
+2026-02-03 16:19:06,644 - WARNING - No data available
+2026-02-03 16:19:36,647 - WARNING - No data available
+2026-02-03 16:20:06,649 - WARNING - No data available
+2026-02-03 16:20:36,652 - WARNING - No data available
+2026-02-03 16:21:06,654 - WARNING - No data available
+2026-02-03 16:21:36,657 - WARNING - No data available
+2026-02-03 16:22:06,660 - WARNING - No data available
+2026-02-03 16:22:36,662 - WARNING - No data available
+2026-02-03 16:23:06,664 - WARNING - No data available
+2026-02-03 16:23:36,667 - WARNING - No data available
+2026-02-03 16:24:06,669 - WARNING - No data available
+2026-02-03 16:24:36,670 - WARNING - No data available
+2026-02-03 16:25:06,673 - WARNING - No data available
+2026-02-03 16:25:36,676 - WARNING - No data available
+2026-02-03 16:26:06,678 - WARNING - No data available
+2026-02-03 16:26:36,680 - WARNING - No data available
+2026-02-03 16:27:06,687 - WARNING - No data available
+2026-02-03 16:27:36,692 - WARNING - No data available
+2026-02-03 16:29:32,773 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-03 16:48:37,667 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-03 16:48:37,718 - WARNING - No data available
+2026-02-03 16:49:07,723 - WARNING - No data available
+2026-02-03 16:49:37,725 - WARNING - No data available
+2026-02-03 16:50:07,728 - WARNING - No data available
+2026-02-03 16:50:37,731 - WARNING - No data available
+2026-02-03 16:51:07,734 - WARNING - No data available
+2026-02-03 16:51:37,736 - WARNING - No data available
+2026-02-03 16:52:07,739 - WARNING - No data available
+2026-02-03 16:52:37,747 - WARNING - No data available
+2026-02-03 16:53:07,764 - WARNING - No data available
+2026-02-04 05:33:17,174 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 05:33:17,190 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:33:47,202 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:34:17,210 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:34:47,214 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:35:17,221 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:35:47,245 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:36:17,250 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:36:47,258 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:37:17,267 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:37:47,273 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:38:17,279 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:38:47,295 - ERROR - Detection error: Invalid frequency: 1S. Failed to parse with error message: ValueError("Invalid frequency: S. Failed to parse with error message: KeyError('S'). Did you mean s?")
+2026-02-04 05:40:36,514 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 05:42:21,673 - INFO - Starting C2 beacon monitoring (interval: 30s)

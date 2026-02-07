@@ -1,0 +1,107 @@
+2026-02-04 05:50:29,736 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 05:50:29,781 - WARNING - No data available
+2026-02-04 05:50:59,783 - WARNING - No data available
+2026-02-04 05:51:29,789 - WARNING - No data available
+2026-02-04 05:51:59,791 - WARNING - No data available
+2026-02-04 05:56:54,455 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 05:56:54,494 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.100, P-Score: 0.742
+2026-02-04 05:56:54,494 - ERROR - Detection error: Object of type bool is not JSON serializable
+2026-02-04 06:00:26,997 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 06:03:04,536 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 06:03:04,557 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.100, P-Score: 0.712
+2026-02-04 06:08:43,748 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 06:13:53,934 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-04 06:16:54,038 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-06 14:12:06,358 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-06 14:42:59,529 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-06 14:47:38,562 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-06 14:47:38,719 - WARNING - No data available
+2026-02-06 14:48:08,726 - WARNING - No data available
+2026-02-06 14:48:38,743 - WARNING - No data available
+2026-02-06 14:49:08,747 - WARNING - No data available
+2026-02-06 14:49:38,749 - WARNING - No data available
+2026-02-06 14:50:08,752 - WARNING - No data available
+2026-02-06 14:50:38,757 - WARNING - No data available
+2026-02-06 14:51:08,765 - WARNING - No data available
+2026-02-06 14:51:38,767 - WARNING - No data available
+2026-02-06 14:52:08,770 - WARNING - No data available
+2026-02-06 14:52:38,775 - WARNING - No data available
+2026-02-06 14:53:09,326 - WARNING - No data available
+2026-02-06 14:53:39,409 - WARNING - No data available
+2026-02-06 14:54:11,241 - WARNING - No data available
+2026-02-06 14:54:47,979 - WARNING - No data available
+2026-02-06 14:55:20,292 - WARNING - No data available
+2026-02-06 14:55:52,222 - WARNING - No data available
+2026-02-06 14:56:24,300 - WARNING - No data available
+2026-02-06 14:56:56,401 - WARNING - No data available
+2026-02-06 14:57:30,033 - WARNING - No data available
+2026-02-06 14:58:05,294 - WARNING - No data available
+2026-02-06 14:58:37,090 - WARNING - No data available
+2026-02-06 14:59:09,952 - WARNING - No data available
+2026-02-06 14:59:41,137 - WARNING - No data available
+2026-02-06 15:00:13,472 - WARNING - No data available
+2026-02-06 15:00:47,256 - WARNING - No data available
+2026-02-06 15:01:21,192 - WARNING - No data available
+2026-02-06 15:01:53,324 - WARNING - No data available
+2026-02-06 15:02:27,638 - WARNING - No data available
+2026-02-06 15:03:04,897 - WARNING - No data available
+2026-02-06 15:03:42,007 - WARNING - No data available
+2026-02-06 15:04:20,631 - WARNING - No data available
+2026-02-06 15:04:55,321 - WARNING - No data available
+2026-02-06 15:05:26,985 - WARNING - No data available
+2026-02-06 15:06:05,281 - WARNING - No data available
+2026-02-06 15:06:44,575 - WARNING - No data available
+2026-02-06 15:07:17,668 - WARNING - No data available
+2026-02-06 15:07:50,306 - WARNING - No data available
+2026-02-06 15:08:24,375 - WARNING - No data available
+2026-02-06 15:08:54,598 - WARNING - No data available
+2026-02-06 15:09:27,065 - WARNING - No data available
+2026-02-06 15:09:59,089 - WARNING - No data available
+2026-02-06 15:10:31,264 - WARNING - No data available
+2026-02-06 15:11:04,946 - WARNING - No data available
+2026-02-06 15:11:38,892 - WARNING - No data available
+2026-02-06 15:12:12,730 - WARNING - No data available
+2026-02-06 15:12:45,450 - WARNING - No data available
+2026-02-06 15:13:28,168 - WARNING - No data available
+2026-02-06 15:14:06,077 - WARNING - No data available
+2026-02-06 15:14:50,894 - WARNING - No data available
+2026-02-06 15:15:27,057 - WARNING - No data available
+2026-02-06 15:16:10,408 - WARNING - No data available
+2026-02-06 15:16:57,869 - WARNING - No data available
+2026-02-06 15:17:33,752 - WARNING - No data available
+2026-02-06 15:18:08,776 - WARNING - No data available
+2026-02-06 15:18:44,942 - WARNING - No data available
+2026-02-07 05:00:37,900 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-07 05:01:00,769 - WARNING - No data available
+2026-02-07 05:05:16,797 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-07 05:05:16,879 - WARNING - No data available
+2026-02-07 05:05:46,884 - WARNING - No data available
+2026-02-07 05:06:16,897 - WARNING - No data available
+2026-02-07 05:06:46,901 - WARNING - No data available
+2026-02-07 05:07:16,904 - WARNING - No data available
+2026-02-07 05:07:46,908 - WARNING - No data available
+2026-02-07 04:18:05,561 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-07 04:18:05,673 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:18:05,676 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:18:35,683 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:18:35,689 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:19:05,698 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:19:05,700 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:19:35,707 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:19:35,710 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:20:05,716 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:20:05,718 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:20:35,723 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:20:35,725 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:21:05,733 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:21:05,735 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:21:35,744 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:21:35,745 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 04:22:05,751 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.200, P-Score: 0.819
+2026-02-07 04:22:05,752 - WARNING - C2 BEACON DETECTED - Host: 192.168.1.201, P-Score: 0.880
+2026-02-07 15:17:33,397 - INFO - Starting C2 beacon monitoring (interval: 30s)
+2026-02-07 15:17:33,459 - WARNING - No data available
+2026-02-07 15:18:03,512 - WARNING - No data available
+2026-02-07 15:18:33,520 - WARNING - No data available
+2026-02-07 15:19:03,523 - WARNING - No data available
+2026-02-07 15:19:33,527 - WARNING - No data available

@@ -1,0 +1,10 @@
+{
+  "p_score": 0.9042859011116429,
+  "fft_peak": 0.9326965925664399,
+  "autocorr_max": 0.9667823180234777,
+  "entropy_norm": 0.2775283156216209,
+  "dominant_frequency": 0.1,
+  "dominant_period": 10.0,
+  "beacon_detected": "True",
+  "explanation": "True C2 beacon with low entropy (automated traffic)"
+}
