@@ -1,0 +1,105 @@
+
+        C2 BEACON DETECTION ANALYSIS REPORT
+        ===================================
+        Generated: 2025-12-16 08:25:50
+        
+        1. DATA SUMMARY
+        ---------------
+        Log File: c2_beacon.log
+        Total Records: 96
+        Beacon Alerts: 20
+        Time Range: 2025-12-16 07:45:54 to 2025-12-16 07:50:22
+        Duration: 268.0 seconds
+        
+        2. TIME SERIES STATISTICS
+        -------------------------
+        Alert Count:
+          - Mean: 0.07
+          - Std Dev: 0.26
+          - Max: 1
+          - Min: 0
+        
+        Bytes to Server:
+          - Total: 1543 bytes
+          - Mean per interval: 5.74
+        
+        3. FREQUENCY ANALYSIS (FFT)
+        ---------------------------
+        Dominant Frequency: 0.1152 Hz
+        Dominant Period: 8.68 seconds
+        Periodicity Score: 313.18/1000
+        
+        4. DIRECT INTERVAL ANALYSIS
+        ---------------------------
+        
+          - Average Interval: 14.10 seconds
+          - Standard Deviation: 7.22 seconds
+          - Minimum Interval: 8.32 seconds
+          - Maximum Interval: 31.84 seconds
+          - Consistency: LOW
+        
+        5. DETECTION RESULTS
+        --------------------
+        Beacon Pattern Detected: YES
+        Confidence Level: HIGH
+        
+        6. SIGNIFICANT FREQUENCIES
+        ---------------------------
+                Peak 1: 0.0149 Hz (Period: 67.25s, Magnitude: 39.31%)
+        Peak 2: 0.0260 Hz (Period: 38.43s, Magnitude: 31.68%)
+        Peak 3: 0.0409 Hz (Period: 24.45s, Magnitude: 60.12%)
+        Peak 4: 0.0669 Hz (Period: 14.94s, Magnitude: 43.11%)
+        Peak 5: 0.0892 Hz (Period: 11.21s, Magnitude: 46.88%)
+        Peak 6: 0.1004 Hz (Period: 9.96s, Magnitude: 76.05%)
+        Peak 7: 0.1078 Hz (Period: 9.28s, Magnitude: 75.40%)
+        Peak 8: 0.1152 Hz (Period: 8.68s, Magnitude: 100.00%)
+        Peak 9: 0.1524 Hz (Period: 6.56s, Magnitude: 63.63%)
+        Peak 10: 0.1970 Hz (Period: 5.08s, Magnitude: 85.01%)
+        Peak 11: 0.2082 Hz (Period: 4.80s, Magnitude: 42.09%)
+        Peak 12: 0.2230 Hz (Period: 4.48s, Magnitude: 78.64%)
+        Peak 13: 0.2342 Hz (Period: 4.27s, Magnitude: 62.24%)
+        Peak 14: 0.2416 Hz (Period: 4.14s, Magnitude: 51.10%)
+        Peak 15: 0.2491 Hz (Period: 4.01s, Magnitude: 71.48%)
+        Peak 16: 0.2639 Hz (Period: 3.79s, Magnitude: 61.97%)
+        Peak 17: 0.3086 Hz (Period: 3.24s, Magnitude: 88.60%)
+        Peak 18: 0.3383 Hz (Period: 2.96s, Magnitude: 58.84%)
+        Peak 19: 0.3494 Hz (Period: 2.86s, Magnitude: 94.35%)
+        Peak 20: 0.3643 Hz (Period: 2.74s, Magnitude: 61.02%)
+        Peak 21: 0.3792 Hz (Period: 2.64s, Magnitude: 48.43%)
+        Peak 22: 0.4164 Hz (Period: 2.40s, Magnitude: 72.97%)
+        Peak 23: 0.4275 Hz (Period: 2.34s, Magnitude: 74.83%)
+        Peak 24: 0.4387 Hz (Period: 2.28s, Magnitude: 45.00%)
+        Peak 25: 0.4461 Hz (Period: 2.24s, Magnitude: 40.85%)
+        Peak 26: 0.4572 Hz (Period: 2.19s, Magnitude: 60.62%)
+        Peak 27: 0.4647 Hz (Period: 2.15s, Magnitude: 78.13%)
+        Peak 28: 0.4907 Hz (Period: 2.04s, Magnitude: 41.75%)
+
+        7. RECOMMENDATIONS
+        ------------------
+                🔴 HIGH PRIORITY: Periodic C2 beacon detected!
+           - Estimated beacon interval: 8.68 seconds
+           - Investigate source IP: 192.168.1.197
+           - Target C2 server: 8.8.8.8
+           - Immediate actions:
+              1. Isolate the affected machine
+              2. Block C2 server IP in firewall
+              3. Scan for malware persistence
+              4. Review authentication logs
+        
+        8. FILES GENERATED
+        ------------------
+        - time_series_analysis.png: Time vs. traffic volume
+        - fft_frequency_analysis.png: Frequency domain analysis
+        - beacon_interval_distribution.png: Interval histogram
+        - This report: beacon_detection_report.txt
+        
+        9. ANALYSIS METHODOLOGY
+        -----------------------
+        1. Time series created with 1-second resolution
+        2. FFT applied with Hanning window to reduce spectral leakage
+        3. DC component (0 Hz) excluded from analysis
+        4. Peaks detected using prominence-based algorithm
+        5. Periodicity scoring based on weighted peak magnitudes
+        
+        END OF REPORT
+        

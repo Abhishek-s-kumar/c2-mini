@@ -40,41 +40,71 @@ class C2Beacon:
         self.logger = logging.getLogger('C2Beacon')
         self.logger.setLevel(logging.INFO)
         
+        # Remove existing handlers to avoid duplicates
+        if self.logger.handlers:
+            self.logger.handlers.clear()
+        
         # Create file handler
-        fh = logging.FileHandler('c2_beacon.log')
+        fh = logging.FileHandler('c2_beacon.log', mode='w')
         fh.setLevel(logging.INFO)
         
         # Create JSON formatter to simulate Suricata eve.json format
+        # Use a lambda to capture self's attributes
         class JsonFormatter(logging.Formatter):
+            def __init__(self, c2_server, victim_ip):
+                super().__init__()
+                self.c2_server = c2_server
+                self.victim_ip = victim_ip
+            
             def format(self, record):
+                # Extract extra fields from record
+                extra_data = {}
+                if hasattr(record, 'src_ip'):
+                    extra_data['src_ip'] = record.src_ip
+                if hasattr(record, 'dest_ip'):
+                    extra_data['dest_ip'] = record.dest_ip
+                if hasattr(record, 'dest_port'):
+                    extra_data['dest_port'] = record.dest_port
+                if hasattr(record, 'proto'):
+                    extra_data['proto'] = record.proto
+                if hasattr(record, 'bytes_toserver'):
+                    extra_data['bytes_toserver'] = record.bytes_toserver
+                if hasattr(record, 'bytes_toclient'):
+                    extra_data['bytes_toclient'] = record.bytes_toclient
+                if hasattr(record, 'signature'):
+                    extra_data['signature'] = record.signature
+                
                 log_data = {
                     "timestamp": datetime.now().isoformat(),
                     "event_type": "alert",
-                    "src_ip": getattr(record, 'src_ip', '192.168.1.150'),
-                    "dest_ip": getattr(record, 'dest_ip', self.c2_server),
+                    "src_ip": extra_data.get('src_ip', self.victim_ip),
+                    "dest_ip": extra_data.get('dest_ip', self.c2_server),
                     "src_port": random.randint(1024, 65535),
-                    "dest_port": getattr(record, 'dest_port', 443),
-                    "proto": getattr(record, 'proto', 'TCP'),
+                    "dest_port": extra_data.get('dest_port', 443),
+                    "proto": extra_data.get('proto', 'TCP'),
                     "alert": {
-                        "action": getattr(record, 'action', 'allowed'),
-                        "signature": getattr(record, 'signature', 'ET MALWARE C2 Beacon'),
-                        "category": getattr(record, 'category', 'Malware Beacon'),
-                        "severity": getattr(record, 'severity', 1)
+                        "action": "allowed",
+                        "signature": extra_data.get('signature', 'ET MALWARE C2 Beacon'),
+                        "category": "Malware Beacon",
+                        "severity": 1
                     },
-                    "bytes_toserver": getattr(record, 'bytes_toserver', random.randint(100, 500)),
-                    "bytes_toclient": getattr(record, 'bytes_toclient', random.randint(1000, 5000)),
+                    "bytes_toserver": extra_data.get('bytes_toserver', random.randint(100, 500)),
+                    "bytes_toclient": extra_data.get('bytes_toclient', random.randint(1000, 5000)),
                     "flow": {
-                        "bytes_toserver": getattr(record, 'bytes_toserver', random.randint(100, 500)),
-                        "bytes_toclient": getattr(record, 'bytes_toclient', random.randint(1000, 5000)),
+                        "bytes_toserver": extra_data.get('bytes_toserver', random.randint(100, 500)),
+                        "bytes_toclient": extra_data.get('bytes_toclient', random.randint(1000, 5000)),
                         "pkts_toserver": random.randint(1, 5),
                         "pkts_toclient": random.randint(3, 10)
                     }
                 }
                 return json.dumps(log_data)
         
-        formatter = JsonFormatter()
+        formatter = JsonFormatter(self.c2_server, self.victim_ip)
         fh.setFormatter(formatter)
         self.logger.addHandler(fh)
+        
+        # Disable propagation to avoid double logging
+        self.logger.propagate = False
         
     def http_beacon(self):
         """Simulate HTTP beacon (common C2 technique)"""
@@ -93,11 +123,8 @@ class C2Beacon:
                 'timestamp': time.time()
             }
             
-            # Simulate the request without actually sending it
-            # In real scenario, you would use: response = requests.post(url, headers=headers, json=data)
-            
             # Log the simulated beacon
-            self.logger.info('HTTP Beacon', extra={
+            self.logger.info('HTTP Beacon sent', extra={
                 'src_ip': self.victim_ip,
                 'dest_ip': self.c2_server,
                 'dest_port': 80,
@@ -118,7 +145,7 @@ class C2Beacon:
             # Simulate DNS query for C2
             domain = f"{random.randint(100000, 999999)}.malicious-domain.com"
             
-            self.logger.info('DNS Beacon', extra={
+            self.logger.info('DNS Beacon query', extra={
                 'src_ip': self.victim_ip,
                 'dest_ip': '8.8.8.8',  # DNS server
                 'dest_port': 53,
@@ -159,6 +186,8 @@ class C2Beacon:
         
         for _ in range(random.randint(1, 3)):
             dest = random.choice(destinations)
+            signature = random.choice(['ET WEB_CLIENT', 'ET DNS', 'ET POLICY'])
+            
             self.logger.info('Background Traffic', extra={
                 'src_ip': self.victim_ip,
                 'dest_ip': dest,
@@ -166,7 +195,7 @@ class C2Beacon:
                 'proto': random.choice(['TCP', 'UDP']),
                 'bytes_toserver': random.randint(500, 2000),
                 'bytes_toclient': random.randint(1000, 5000),
-                'signature': random.choice(['ET WEB_CLIENT', 'ET DNS', 'ET POLICY'])
+                'signature': signature
             })
     
     def run(self, duration=300):
@@ -202,8 +231,7 @@ class C2Beacon:
 
 def create_suricata_rules():
     """Generate sample Suricata rules to detect the beacons"""
-    rules = """
-# HTTP Beacon Rule
+    rules = """# HTTP Beacon Rule
 alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET MALWARE C2 HTTP Beacon"; flow:established,to_server; content:"/api/v1/checkin"; http_uri; content:"status"; content:"active"; fast_pattern; classtype:trojan-activity; sid:2024123; rev:1;)
 
 # DNS Beacon Rule  
@@ -219,16 +247,67 @@ alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET MALWARE ICMP Tunnel"; ity
     print("Suricata rules saved to: suricata_beacon_rules.rules")
     print("Place in /etc/suricata/rules/ and reload Suricata")
 
+def create_sample_logs():
+    """Create sample log entries for testing"""
+    sample_logs = [
+        {
+            "timestamp": "2025-12-16T07:39:28.418480",
+            "event_type": "alert",
+            "src_ip": "192.168.1.150",
+            "dest_ip": "192.168.1.100",
+            "src_port": 54321,
+            "dest_port": 80,
+            "proto": "TCP",
+            "alert": {
+                "action": "allowed",
+                "signature": "ET MALWARE HTTP Beacon Checkin",
+                "category": "Malware Beacon",
+                "severity": 1
+            },
+            "bytes_toserver": 150,
+            "bytes_toclient": 2048,
+            "flow": {
+                "bytes_toserver": 150,
+                "bytes_toclient": 2048,
+                "pkts_toserver": 2,
+                "pkts_toclient": 5
+            }
+        }
+    ]
+    
+    with open('sample_c2_beacon.log', 'w') as f:
+        for log in sample_logs:
+            f.write(json.dumps(log) + '\n')
+    
+    print("Sample logs created: sample_c2_beacon.log")
+
 if __name__ == "__main__":
     # Create Suricata detection rules
     create_suricata_rules()
     
-    # Run beacon simulation
-    beacon = C2Beacon(
-        c2_server="192.168.1.100",
-        beacon_interval=10,  # 10 second base interval
-        jitter=2  # ±2 seconds jitter
-    )
+    # Create sample logs for testing
+    create_sample_logs()
     
-    # Run for 5 minutes
-    beacon.run(duration=300)
+    print("\n" + "="*60)
+    print("CHOOSE MODE:")
+    print("1. Run full simulation (generates logs for 5 minutes)")
+    print("2. Use sample logs for testing analyzer")
+    print("="*60)
+    
+    choice = input("Enter choice (1 or 2): ").strip()
+    
+    if choice == "1":
+        # Run beacon simulation
+        beacon = C2Beacon(
+            c2_server="192.168.1.100",
+            beacon_interval=10,  # 10 second base interval
+            jitter=2  # ±2 seconds jitter
+        )
+        
+        # Run for 5 minutes
+        beacon.run(duration=300)
+    else:
+        print("\nUsing sample logs for testing.")
+        print("You can now run: python beacon_analyzer.py")
+        print("\nTo analyze sample logs, run:")
+        print("python beacon_analyzer.py --input sample_c2_beacon.log")
