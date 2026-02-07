@@ -58,7 +58,7 @@ def get_status():
 def analyze_now():
     """Force immediate analysis"""
     if detector.connect():
-        df = detector.get_recent_connections(minutes=2)
+        df = detector.get_recent_connections(minutes=5)
         results = []
         
         for host in df['id_orig_h'].unique()[:5]:
